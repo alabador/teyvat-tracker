@@ -1,14 +1,6 @@
-import './Navlinks.css'
 
 function Navlinks() {
     return (
-        // <ul className='flex items-center gap-4'>
-            
-        //     <li>Home</li>
-        //     <li>Events</li>
-        //     <li>Characters</li>
-        //     <li>Items</li>
-        // </ul>
         <>
             <ul className="items-stretch hidden space-x-3 md:flex pr-4">
                 <li className="flex">
