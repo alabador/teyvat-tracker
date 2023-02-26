@@ -1,8 +1,9 @@
 
-function Navbar() {
+function Navbar({name}) {
     return(
-        <div className="navbar bg-base-100">
-            <a className="btn btn-ghost normal-case text-xl" href="#">daisyUI</a>
+        <div className="navbar justify-between">
+            <button className="btn btn-ghost normal-case text-xl" href="#">{name}</button>
+            
         </div>
     )
 }
