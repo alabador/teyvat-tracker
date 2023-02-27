@@ -49,8 +49,11 @@ def create_dict(data):
 
 create_dict(my_data)
 
-json_data = json.dumps(formatted_data, indent=2)
+json_data = json.dumps(formatted_data, indent=4)
 
-print(json_data)
+with open("./src/data/events.json", "w") as outfile:
+    outfile.write(json_data)
+
+# print(json_data)
         
 
