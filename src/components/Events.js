@@ -7,9 +7,11 @@ const Events = () => {
             <section className='flex flex-col gap-6'>
                 {EventData.map(gameEvent => {
                     const updatedImage = gameEvent.image.split('/revision')[0]
-                    return(
-                        <EventCard imgSrc={updatedImage}/>
-                    )
+                    if (gameEvent.category.includes('In-Game')) {
+                        return(
+                            <EventCard imgSrc={updatedImage}/>
+                        )
+                    }
                 }         
                 )}
             </section>
