@@ -3,7 +3,7 @@ import EventCard from './EventCard';
 
 const Events = () => {
     return(
-        <div>
+        <div className="grid col-span-2 bg-white p-6">
             <section className='flex flex-col gap-6'>
                 {EventData.map(gameEvent => {
                     const updatedImage = gameEvent.image.split('/revision')[0]

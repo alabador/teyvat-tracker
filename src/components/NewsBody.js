@@ -1,9 +1,11 @@
+import Announcements from "./Announcements";
 import Events from "./Events";
 
 const NewsBody = () => {
     return (
-        <section className="grid grid-cols-5">
-            <Events className="col-start-4 col-span-2"/>
+        <section className="grid grid-cols-5 gap-8 bg-slate-50">
+            <Announcements />
+            <Events />
         </section>
     )
 }
