@@ -18,7 +18,7 @@ const Announcements = () => {
                 }         
                 )}
             </section>
-            <div className='flex flex-col justify-center flex-grow items-center bg-red-50 mt-6 rounded-xl'>
+            <div className='flex flex-col justify-center flex-grow items-center py-4 bg-red-50 mt-6 rounded-xl'>
                 <img src='/paimon-sleep.png' alt="paimon sleeping" className='w-16'></img>
                 <p className='text-sm pt-4'>No more current events. Check back soon for updates!</p>
             </div>
