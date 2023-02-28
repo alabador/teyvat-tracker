@@ -1,7 +1,7 @@
 
 const EventCard = ({imgSrc}) => {
     return (
-        <img src={imgSrc} alt="event" className="rounded-xl w-full"></img>
+        <img src={`/event-images/${imgSrc}.webp`} alt="event" className="rounded-xl w-full"></img>
     )
 }
 

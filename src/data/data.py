@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup
 from pprint import pprint
 import json
 
-# https://genshin.hoyoverse.com/en/news   
-# try using this instead, for better quality images
 url = "https://genshin-impact.fandom.com/wiki/Event"
 data = requests.get(url)
 

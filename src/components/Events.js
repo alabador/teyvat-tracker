@@ -6,10 +6,12 @@ const Events = () => {
         <div className="grid col-span-2 bg-white p-6">
             <section className='flex flex-col gap-6'>
                 {EventData.map(gameEvent => {
-                    const updatedImage = gameEvent.image.split('revision')[0]
+                    // const updatedImage = gameEvent.image.split('revision')[0]
+                    const imageString = gameEvent.image.split('/').find(el => el.includes('_'));
+                    const eventString = imageString.split('.')[0]
                     if (gameEvent.category.includes('In-Game')) {
                         return(
-                            <EventCard imgSrc={updatedImage}/>
+                            <EventCard imgSrc={eventString}/>
                         )
                     }
                 }         
