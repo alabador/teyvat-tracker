@@ -22,7 +22,9 @@ const CharacterSection = () => {
     
 
     return (
-        <div></div>
+        <div>
+            {/* loop through array of characters and render/return a character component */}
+        </div>
     )
 }
 
