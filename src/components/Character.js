@@ -34,6 +34,29 @@ const Character = ({charName}) => {
     //     }
     // })
 
+    function chooseElementBackground(element) {
+        if (element === 'Pyro') {
+            return 'bg-red-700'
+        }
+        else if (element === 'Cryo') {
+            return 'bg-sky-300'
+        }
+        else if (element === 'Hydro') {
+            return 'bg-blue-500'
+        }
+        else if (element === 'Anemo') {
+            return 'bg-teal-300'
+        }
+        else if (element === 'Geo') {
+            return 'bg-yellow-900'
+        }
+        else if (element === 'Electro') {
+            return 'bg-purple-800'
+        }
+        else if (element === 'Dendro') {
+            return 'bg-green-700'
+        }
+    }
 
     return (
         <div className="card items-center justify-evenly bg-base-100 shadow-xl">
@@ -42,8 +65,11 @@ const Character = ({charName}) => {
                 <h2 className="card-title capitalize">{charName}</h2>
             </div>
             <div className="flex justify-center">
-                <div className="inline-block px-2 py-1 text-sm font-semibold rounded-md bg-blue-400 text-gray-900">{charInfo.vision}</div>
-                {/* <img src={`https://api.genshin.dev/elements/${charInfo.vision.toLowerCase()}/icon`} alt="element icon"></img> */}
+                <div className={`inline-block px-2 py-1 text-sm font-semibold rounded-md text-gray-900
+                ${chooseElementBackground(charInfo.vision)} 
+                `}>
+                {charInfo.vision}
+                </div>
             </div>
         </div>
     )
