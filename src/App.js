@@ -1,17 +1,14 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import CharacterSection from './components/CharacterSection';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import NewsBody from './components/NewsBody';
+import Characters from './pages/Characters';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar name="Teyvat Tracker"/>
-      <Hero />
-      <NewsBody />
-      <CharacterSection />
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/characters' element={<Characters />} />
+    </Routes>
   );
 }
 
