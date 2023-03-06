@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
 
 function Navlinks() {
     return (
         <>
             <ul className="items-stretch hidden space-x-3 md:flex pr-4">
                 <li className="flex">
-                    <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Home</a>
+                    <Link to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Home</Link>
                 </li>
                 <li className="flex">
-                    <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Events</a>
+                    <Link to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Events</Link>
                 </li>
                 <li className="flex">
-                    <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Characters</a>
+                    <Link to="/characters" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Characters</Link>
                 </li>
                 <li className="flex">
                     <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Items</a>
