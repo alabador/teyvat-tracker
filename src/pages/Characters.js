@@ -1,8 +1,9 @@
+import CharacterSection from "../components/CharacterSection";
 
 const Characters = () => {
     return (
         <div>
-            <h1>Characters</h1>
+            <CharacterSection />
         </div>
     )
 }

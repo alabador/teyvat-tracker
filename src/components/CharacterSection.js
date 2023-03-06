@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Character from "./Character";
 
 const CharacterSection = () => {
-    const [charList, setCharList] = useState('');
+    const [charList, setCharList] = useState([]);
     //useEffect runs everytime the app renders
     useEffect(() => {
         const url = "https://api.genshin.dev/characters";
@@ -27,9 +28,11 @@ const CharacterSection = () => {
     return (
         <div>
             {/* loop through array of characters and render/return a character component */}
-            {/* {charList.map(item => {
-                return <p>{item}</p>
-            })} */}
+            {charList.map(item => {
+                return (
+                    <Character charName={item}/>
+                )
+            })}
         </div>
     )
 }
