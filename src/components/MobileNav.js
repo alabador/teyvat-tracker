@@ -18,7 +18,7 @@ function MobileNav({state}) {
                 <li className="">
                     <Link to="/characters" className="flex items-center px-4 py-8 border-b-2 hover:bg-slate-100" onClick={handleClick}>Characters</Link>
                 </li>
-                <li className="flex flex-col items-center flex-1 self-center pt-16"
+                <li className="flex flex-col items-center flex-1 self-center pt-16 px-8"
                 onClick={() => {
                     setShowChild(!showChild)
                 }}

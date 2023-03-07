@@ -4,7 +4,7 @@ import AnnouncementCard from './AnnouncementCard';
 
 const Announcements = () => {
     return(
-        <div className="flex flex-col col-span-3 bg-white p-6">
+        <div className="flex flex-col col-span-3 p-6">
             <h2 className='text-2xl py-4 font-bold'>Announcements</h2>
             <hr className='py-2'></hr>
             <section className='flex flex-col gap-6'>

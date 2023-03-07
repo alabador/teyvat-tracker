@@ -5,7 +5,7 @@ const Events = () => {
     const date = new Date();
     let currentMonth = date.toLocaleString('default', {month: 'long'});
     return(
-        <div className="grid col-span-2 bg-white p-6">
+        <div className="grid col-span-2 p-6">
             <h2 className='text-2xl py-4 font-bold'>{currentMonth} Events</h2>
             <hr className='py-2'></hr>
             <section className='flex flex-col gap-6'>
