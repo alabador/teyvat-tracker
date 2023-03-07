@@ -12,7 +12,6 @@ const CharacterSection = () => {
             try {
                 const response = await fetch(url);
                 const json = await response.json();
-                console.log(json);
                 setCharList(json);
                 } 
                 catch (error) {
