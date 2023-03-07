@@ -13,9 +13,6 @@ function Navlinks() {
                 <li className="flex">
                     <Link to="/characters" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Characters</Link>
                 </li>
-                <li className="flex">
-                    <a rel="noopener noreferrer" href="#" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent hover:border-blue-300">Items</a>
-                </li>
 		    </ul>
 		    <button className="flex justify-end p-4 md:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">

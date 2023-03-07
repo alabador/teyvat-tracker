@@ -2,14 +2,16 @@ import { useEffect, useState } from "react";
 
 const Character = ({charName}) => {
     const [charInfo, setCharInfo] = useState('');
-    const [element, setElement] = useState('');
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const url = `https://api.genshin.dev/characters/${charName}`;
 
         const fetchData = async () => {
             try {
+                setLoading(true)
                 const response = await fetch(url);
                 const json = await response.json();
+                setLoading(false)
                 setCharInfo(json);
                 } 
                 catch (error) {
@@ -60,7 +62,16 @@ const Character = ({charName}) => {
 
     return (
         <div className="card items-center justify-evenly bg-base-100 shadow-xl">
+            {loading ? (
+            <div className="flex items-center justify-center space-x-2">
+	            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+	            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+	            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+            </div>
+            ) : (
             <figure className={charInfo.rarity === 5 ? 'bg-yellow-500 bg-opacity-80 h-3/5': 'bg-violet-800 bg-opacity-70 h-3/5'}><img src={`https://api.genshin.dev/characters/${charName}/icon-big`} alt="character card" /></figure>
+            )
+            }
             <div className="py-4">
                 <h2 className="card-title capitalize">{charName}</h2>
             </div>
