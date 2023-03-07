@@ -69,7 +69,14 @@ const Character = ({charName}) => {
 	            <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
             </div>
             ) : (
-            <figure className={charInfo.rarity === 5 ? 'bg-yellow-500 bg-opacity-80 h-3/5': 'bg-violet-800 bg-opacity-70 h-3/5'}><img src={`https://api.genshin.dev/characters/${charName}/icon-big`} alt="character card" /></figure>
+            <figure className={charInfo.rarity === 5 ? 'bg-yellow-500 bg-opacity-80 h-3/5': 'bg-violet-800 bg-opacity-70 h-3/5'}><img src={`https://api.genshin.dev/characters/${charName}/icon-big`} 
+            alt="character card" 
+            onError={(e) => {
+                e.target.src=`https://api.genshin.dev/characters/${charName}/icon`;
+                e.target.className = `h-full`  
+            }
+            }/>
+            </figure>
             )
             }
             <div className="py-4">
