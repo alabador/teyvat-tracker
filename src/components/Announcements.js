@@ -15,6 +15,7 @@ const Announcements = () => {
                             <AnnouncementCard imgSrc={updatedImage} title={gameEvent.title} dates={gameEvent.dates}/>
                         )
                     }
+                    return null;
                 }         
                 )}
             </section>

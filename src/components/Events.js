@@ -18,6 +18,7 @@ const Events = () => {
                             <EventCard imgSrc={eventString}/>
                         )
                     }
+                    return null;
                 }         
                 )}
             </section>
