@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function MobileNav({state}) {
-    const [showChild, setShowChild] = useState(false);
+    const [showChild, setShowChild] = useState(true);
     function handleClick() {
         state(false);
     }
